@@ -20,8 +20,8 @@ This is a fork of https://github.com/tomstokes/python-spi which seems to be aban
 
 ## Example
 ```python3
-import spi
-spi = spi.SPI("/dev/spidev1.0")
+from spi import *
+spi = SPI("/dev/spidev1.0")
 spi.mode = SPI.MODE_0
 spi.bits_per_word = 8
 spi.speed = 500000
