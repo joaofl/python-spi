@@ -21,11 +21,11 @@ This is a fork of https://github.com/tomstokes/python-spi which seems to be aban
 ## Example
 ```python3
 from spi import *
-spi = SPI("/dev/spidev1.0")
-spi.mode = SPI.MODE_0
-spi.bits_per_word = 8
-spi.speed = 500000
-received = spi.transfer([0x11, 0x22, 0xFF])
-spi.write([0x12, 0x34, 0xAB, 0xCD])
-received = spi.read(10)
+spidev = SPI("/dev/spidev1.0")
+spidev.mode = SPI.MODE_0
+spidev.bits_per_word = 8
+spidev.speed = 500000
+received = spidev.transfer([0x11, 0x22, 0xFF])
+spidev.write([0x12, 0x34, 0xAB, 0xCD])
+received = spidev.read(10)
 ```
